@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .card-glow {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-glow:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: 0.5s;
+        }
+
+        .card-glow:hover::after {
+            left: 100%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body id="app-body" class="h-full bg-slate-50 text-slate-900"><!-- Cover Page -->
+  <div id="cover-page" class="h-full w-full flex items-center justify-center p-6 md:p-12 absolute inset-0 bg-gradient-to-br from-indigo-600 via-indigo-500 to-blue-600 z-50 transition-opacity duration-700 opacity-100">
+   <div class="text-center max-w-2xl">
+    <div class="mb-8 inline-block">
+     <div class="w-24 h-24 rounded-3xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30"><i data-lucide="sparkles" class="w-12 h-12 text-white"></i>
+     </div>
+    </div>
+    <h1 id="cover-title" class="text-5xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-lg">Selamat Datang</h1>
+    <p id="cover-subtitle" class="text-xl md:text-2xl text-white/90 mb-12 drop-shadow">Jelajahi koleksi artikel-artikel SANSA</p><button id="enter-btn" class="px-8 py-4 bg-white text-indigo-600 rounded-2xl font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"> Masuk </button>
+   </div>
+  </div>
+  <div id="main-wrapper" class="h-full w-full overflow-auto flex flex-col p-6 md:p-12">
+   <!-- Header Section -->
+   <header class="max-w-6xl mx-auto w-full mb-12 text-center">
+    <h1 id="main-title" class="text-[#43608A] text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Koleksi Artikel SANSA</h1>
+    <p id="sub-title" class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">Kumpulan artikel terpercaya dan terbaru seputar SMANEGRA.</p>
+   </header><!-- Grid Cards Section -->
+   <main class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card 1 --> <a href="https://www.instagram.com/p/DVUsZ98kj9A/?img_index=1" target="_blank" rel="noopener noreferrer" class="card-glow group bg-white p-8 rounded-3xl border border-slate-200 flex flex-col h-full cursor-pointer">
+    <div id="icon-bg-1" class="w-64 h-64 rounded-2xl overflow-hidden mb-6 group-hover:scale-110 transition-transform">
+     <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/PONROM.jpeg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <p class="text-[#7D94B2] text-slate-400 mb-2">1 Maret 2026</p>
+    <h3 class="text-[#43608A] text-xl font-bold mb-2">Pondok Ramadan 1447H</h3>
+    <p class="text-[#7D94B2] text-slate-600 text-sm mb-4 line-clamp-2">Rangkuman kegiatan Pondok Ramadan 1447H di SMAN 1 Grati.</p>
+     <div class="flex items-center text-indigo-600 font-semibold text-sm mt-2">
+      Baca Artikel <i data-lucide="arrow-right" class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+     </div></a> 
+     
+    <!-- Card 2 --> <a href="https://www.instagram.com/p/DUxiiW3DxBt/?img_index=1" target="_blank" rel="noopener noreferrer" class="card-glow group bg-white p-8 rounded-3xl border border-slate-200 flex flex-col h-full cursor-pointer">
+    <div id="icon-bg-1" class="w-64 h-64 rounded-2xl overflow-hidden mb-6 group-hover:scale-110 transition-transform">
+     <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/FOTBAR-SARASEHAN.jpeg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <p class="text-[#7D94B2] text-slate-400 mb-2">15 Februari 2026</p>
+    <h3 class="text-[#43608A] text-xl font-bold mb-2">Sarasehan Jurnalistik 2026</h3>
+    <p class="text-[#7D94B2] text-slate-600 text-sm mb-4 line-clamp-2">Reuni spesial dalam rangka memperingati hari Pers, bersama alumni SANSA dari tahun 2006.</p>
+     <div class="flex items-center text-indigo-600 font-semibold text-sm mt-2">
+      Baca Artikel <i data-lucide="arrow-right" class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+     </div></a> 
+          
+    <!-- Card 3 --> <a href="https://www.instagram.com/p/DUGOTKkD9ft/?img_index=1" target="_blank" rel="noopener noreferrer" class="card-glow group bg-white p-8 rounded-3xl border border-slate-200 flex flex-col h-full cursor-pointer">
+    <div id="icon-bg-1" class="w-64 h-64 rounded-2xl overflow-hidden mb-6 group-hover:scale-110 transition-transform">
+     <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/UMM.jpeg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <p class="text-[#7D94B2] text-slate-400 mb-2">29 Januari 2026</p>
+    <h3 class="text-[#43608A] text-xl font-bold mb-2">Sehari Jadi Penulis Bersama Dosen UMM</h3>
+    <p class="text-[#7D94B2] text-slate-600 text-sm mb-4 line-clamp-2">Melalui kegiatan ini, siswa SMANEGRA belajar menulis cerpen dan membuktikan bahwa teknologi hanyalah alat, namun kreativitas kitalah yang menjadi nahkodanya. Let's write with wisdom! 🌟</p>
+     <div class="flex items-center text-indigo-600 font-semibold text-sm mt-2">
+      Baca Artikel <i data-lucide="arrow-right" class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+     </div></a> 
+     
+    <!-- Card 4 --> <a href="https://www.instagram.com/p/DT9Y-0FDyWw/?img_index=1" target="_blank" rel="noopener noreferrer" class="card-glow group bg-white p-8 rounded-3xl border border-slate-200 flex flex-col h-full cursor-pointer">
+    <div id="icon-bg-1" class="w-64 h-64 rounded-2xl overflow-hidden mb-6 group-hover:scale-110 transition-transform">
+     <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/UMM.jpeg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <p class="text-[#7D94B2] text-slate-400 mb-2">26 Januari 2026</p>
+    <h3 class="text-[#43608A] text-xl font-bold mb-2">Isra Mi'raj 1447H</h3>
+    <p class="text-[#7D94B2] text-slate-600 text-sm mb-4 line-clamp-2">Peringatan Isra Mi'raj Nabi Muhammad SAW di SMANEGRA.</p>
+     <div class="flex items-center text-indigo-600 font-semibold">
+      Baca Artikel <i data-lucide="arrow-right" class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+     </div></a> 
+
+    <!-- Card 5 --> <a href="https://www.instagram.com/p/DT3vuGqkxZs/?img_index=1" target="_blank" rel="noopener noreferrer" class="card-glow group bg-white p-8 rounded-3xl border border-slate-200 flex flex-col h-full cursor-pointer">
+    <div id="icon-bg-1" class="w-64 h-64 rounded-2xl overflow-hidden mb-6 group-hover:scale-110 transition-transform">
+     <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/PONROM.jpeg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <p class="text-[#7D94B2] text-slate-400 mb-2">24 Januari 2026</p>
+    <h3 class="text-[#43608A] text-xl font-bold mb-2">Campus Expo 2026</h3>
+    <p class="text-[#7D94B2] text-slate-600 mb-4 line-clamp-2">🎓Campus Expo 2026 di SMAN 1 Grati, mengenal dunia perkuliahan sejak dini adalah langkah awal menata masa depan.</p>
+     <div class="flex items-center text-indigo-600 font-semibold">
+      Baca Artikel <i data-lucide="arrow-right" class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+     </div></a> 
+   </main><!-- Footer -->
+   <footer class="mt-auto pt-12 text-center text-slate-400 text-sm">
+    <p>© 2026 Koleksi Artikel SANSA. Dibuat dengan penuh semangat.</p>
+   </footer>
+  </div>
+  <script>
+        const defaultConfig = {
+            background_color: "#f8fafc",
+            card_bg_color: "#ffffff",
+            text_color: "#0f172a",
+            accent_color: "#4f46e5",
+            secondary_accent: "#0891b2",
+            font_family: "Plus Jakarta Sans",
+            font_size: 16,
+            main_title: "Koleksi Link Kreatif",
+            sub_title: "Kumpulan tautan favorit dan resource terbaik pilihan saya.",
+            cover_title: "Selamat Datang",
+            cover_subtitle: "Jelajahi koleksi link favorit saya",
+            cover_button_text: "Masuk"
+        };
+
+        // Cover page functionality
+        document.getElementById('enter-btn').addEventListener('click', () => {
+            const coverPage = document.getElementById('cover-page');
+            coverPage.style.opacity = '0';
+            coverPage.style.pointerEvents = 'none';
+        });
+
+        // Initialize SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange: async (config) => {
+                    const body = document.getElementById('app-body');
+                    const titleEl = document.getElementById('main-title');
+                    const subtitleEl = document.getElementById('sub-title');
+                    const coverTitle = document.getElementById('cover-title');
+                    const coverSubtitle = document.getElementById('cover-subtitle');
+                    const enterBtn = document.getElementById('enter-btn');
+                    const cards = document.querySelectorAll('.card-glow');
+                    const icons = document.querySelectorAll('[data-lucide]');
+                    
+                    const bgColor = config.background_color || defaultConfig.background_color;
+                    const cardBg = config.card_bg_color || defaultConfig.card_bg_color;
+                    const textColor = config.text_color || defaultConfig.text_color;
+                    const accentColor = config.accent_color || defaultConfig.accent_color;
+                    const fontFamily = config.font_family || defaultConfig.font_family;
+                    const fontSize = config.font_size || defaultConfig.font_size;
+
+                    // Apply styles
+                    body.style.backgroundColor = bgColor;
+                    body.style.color = textColor;
+                    body.style.fontFamily = `${fontFamily}, sans-serif`;
+                    
+                    titleEl.textContent = config.main_title || defaultConfig.main_title;
+                    titleEl.style.fontSize = `${fontSize * 3}px`;
+                    
+                    subtitleEl.textContent = config.sub_title || defaultConfig.sub_title;
+                    subtitleEl.style.fontSize = `${fontSize * 1.2}px`;
+
+                    // Update cover page
+                    coverTitle.textContent = config.cover_title || defaultConfig.cover_title;
+                    coverTitle.style.fontSize = `${fontSize * 4.5}px`;
+                    coverTitle.style.fontFamily = `${fontFamily}, sans-serif`;
+                    
+                    coverSubtitle.textContent = config.cover_subtitle || defaultConfig.cover_subtitle;
+                    coverSubtitle.style.fontSize = `${fontSize * 1.5}px`;
+                    coverSubtitle.style.fontFamily = `${fontFamily}, sans-serif`;
+                    
+                    enterBtn.textContent = config.cover_button_text || defaultConfig.cover_button_text;
+                    enterBtn.style.fontFamily = `${fontFamily}, sans-serif`;
+
+                    cards.forEach(card => {
+                        card.style.backgroundColor = cardBg;
+                        card.style.borderColor = `rgba(0,0,0,0.1)`;
+                        // Update text in buttons/links within card
+                        const linkText = card.querySelector('.flex-grow + div');
+                        if (linkText) linkText.style.color = accentColor;
+                    });
+
+                    // Update specific icon backgrounds for consistency
+                    document.querySelectorAll('[id^="icon-bg-"]').forEach(bg => {
+                        bg.style.backgroundColor = `${accentColor}15`; // 15% opacity
+                    });
+                    document.querySelectorAll('[id^="icon-"]').forEach(ic => {
+                        ic.style.color = accentColor;
+                    });
+                },
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        { get: () => config.background_color || defaultConfig.background_color, set: (c) => window.elementSdk.setConfig({ background_color: c }) },
+                        { get: () => config.card_bg_color || defaultConfig.card_bg_color, set: (c) => window.elementSdk.setConfig({ card_bg_color: c }) },
+                        { get: () => config.text_color || defaultConfig.text_color, set: (c) => window.elementSdk.setConfig({ text_color: c }) },
+                        { get: () => config.accent_color || defaultConfig.accent_color, set: (c) => window.elementSdk.setConfig({ accent_color: c }) },
+                        { get: () => config.secondary_accent || defaultConfig.secondary_accent, set: (c) => window.elementSdk.setConfig({ secondary_accent: c }) }
+                    ],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (f) => window.elementSdk.setConfig({ font_family: f })
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (s) => window.elementSdk.setConfig({ font_size: s })
+                    },
+                    borderables: []
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["cover_title", config.cover_title || defaultConfig.cover_title],
+                    ["cover_subtitle", config.cover_subtitle || defaultConfig.cover_subtitle],
+                    ["cover_button_text", config.cover_button_text || defaultConfig.cover_button_text],
+                    ["main_title", config.main_title || defaultConfig.main_title],
+                    ["sub_title", config.sub_title || defaultConfig.sub_title]
+                ])
+            });
+        }
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc8bbd3e5bbb5e7',t:'MTc3MzU0ODUxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
