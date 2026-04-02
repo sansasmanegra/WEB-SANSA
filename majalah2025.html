@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sansa Digital Magazine</title>
-    <script src="https://cdn.jsdeblivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
@@ -24,6 +24,7 @@
         .page { 
             background-color: white; 
             overflow: hidden; 
+            display: none;
         }
 
         /* Hapus padding agar gambar bisa FULL sampai ke pinggir halaman */
@@ -48,7 +49,7 @@
 </head>
 <body>
     <div id="magazine" class="magazine-container">
-        <div class="page">
+        <div class="page" data-density="hard">
             <div class="page-content">
               <img src="https://raw.githubusercontent.com/lannryomen/Web-SANSA/main/Sansa2025_page-0001.jpg" class="page-img-full">
             </div>
@@ -366,7 +367,7 @@
     const pageFlip = new St.PageFlip(document.getElementById('magazine'), {
         width: 400, 
         height: 600, 
-        size: "fixed",
+        size: "stretch",
        
         // Menambah bayangan biar keren
         drawShadow: true,
